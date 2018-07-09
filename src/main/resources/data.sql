@@ -18,3 +18,5 @@ create table person(
 INSERT INTO person (id, full_name,birth_date) VALUES (1, 'ALI MUJUTHABA', 1500893000);
 INSERT INTO person (id, full_name,birth_date) VALUES (2, 'ISMAIL HAFIZ', 1500793000);
 INSERT INTO person (id, full_name,birth_date) VALUES (3, 'AISHATH SAHAA', 1500893000);
+
+INSERT INTO course (id, course_name) VALUES (1002, 'Bachelor of Hibernate');
