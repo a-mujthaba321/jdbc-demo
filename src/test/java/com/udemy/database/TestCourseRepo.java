@@ -23,19 +23,23 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestCourseRepo {
-    
+
     private Logger logger = LoggerFactory.getLogger(this.getClass());
-    
+
     @Autowired
     private CourseRepository courseRepo;
-    
+
     @Test
     public void findById() {
-        
         Course course = courseRepo.findById(1002);
-        assertEquals("Bachelor of Hibernate", course.getCourseName());
+        assertEquals("Bachelor of IT", course.getCourseName());
         logger.info("Test is running");
-    
     }
-    
+
+    @Test
+    public void deleteById() {
+        courseRepo.deleteById(1001L);
+        assertNull(courseRepo.findById(1001L));
+    }
+
 }
