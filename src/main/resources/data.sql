@@ -23,13 +23,15 @@ INSERT INTO course (id, course_name) VALUES (1001, 'Bachelor of Hibernate');
 INSERT INTO course (id, course_name) VALUES (1002, 'Bachelor of IT');
 INSERT INTO course (id, course_name) VALUES (1003, 'Bachelor of Spring');
 
-INSERT INTO student (id, full_name) VALUES (2001, 'John Doe');
-INSERT INTO student (id, full_name) VALUES (2002, 'Jack Doe');
-INSERT INTO student (id, full_name) VALUES (2003, 'Jill Doe');
+
 
 INSERT INTO passport (id, passport_number) VALUES (3001, 'PP1020232');
 INSERT INTO passport (id, passport_number) VALUES (3002, 'PP5020322');
 INSERT INTO passport (id, passport_number) VALUES (3003, 'PP6020326');
+
+INSERT INTO student (id, full_name, passport_id) VALUES (2001, 'John Doe', 3001);
+INSERT INTO student (id, full_name, passport_id) VALUES (2002, 'Jack Doe', 3002);
+INSERT INTO student (id, full_name, passport_id) VALUES (2003, 'Jill Doe', 3003);
 
 
 INSERT INTO review (id, rating, description) VALUES (4001, '1', 'Bad course');

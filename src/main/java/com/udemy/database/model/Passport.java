@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import lombok.Data;
 
 /**
@@ -25,5 +26,8 @@ public class Passport {
     
     @Column(nullable = false)
     private String passportNumber;
+    
+    @OneToOne(mappedBy = "passport")
+    private Student student;
 
 }
