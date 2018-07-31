@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -31,15 +32,16 @@ public class TestCourseRepo {
 
     @Test
     public void findById() {
-        Course course = courseRepo.findById(1002);
-        assertEquals("Bachelor of IT", course.getCourseName());
+        Course course = courseRepo.findById(1);
+        assertEquals("Bachelor of Hibernate", course.getCourseName());
         logger.info("Test is running");
     }
 
     @Test
+    @DirtiesContext
     public void deleteById() {
-        courseRepo.deleteById(1001L);
-        assertNull(courseRepo.findById(1001L));
+        courseRepo.deleteById(1L);
+        assertNull(courseRepo.findById(1L));
     }
 
 }

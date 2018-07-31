@@ -19,9 +19,9 @@ INSERT INTO person (id, full_name,birth_date) VALUES (1, 'ALI MUJUTHABA', 150089
 INSERT INTO person (id, full_name,birth_date) VALUES (2, 'ISMAIL HAFIZ', 1500793000);
 INSERT INTO person (id, full_name,birth_date) VALUES (3, 'AISHATH SAHAA', 1500893000);
 
-INSERT INTO course (id, course_name) VALUES (1001, 'Bachelor of Hibernate');
-INSERT INTO course (id, course_name) VALUES (1002, 'Bachelor of IT');
-INSERT INTO course (id, course_name) VALUES (1003, 'Bachelor of Spring');
+INSERT INTO course (course_name, lecturer_name, is_full, number_of_students) VALUES ('Bachelor of Hibernate', 'Vlad Mihalcea', true, 1000);
+INSERT INTO course (course_name, lecturer_name, is_full, number_of_students) VALUES ('Bachelor of Spring Boot', 'Stephane Nicoll', true, 2000);
+INSERT INTO course (course_name, lecturer_name, is_full, number_of_students) VALUES ('Bachelor of React', 'Dan Abramov', false,  3000);
 
 
 
@@ -34,6 +34,6 @@ INSERT INTO student (id, full_name, passport_id) VALUES (2002, 'Jack Doe', 3002)
 INSERT INTO student (id, full_name, passport_id) VALUES (2003, 'Jill Doe', 3003);
 
 
-INSERT INTO review (id, rating, description) VALUES (4001, '1', 'Bad course');
-INSERT INTO review (id, rating, description) VALUES (4002, '4', 'Excellent course');
-INSERT INTO review (id, rating, description) VALUES (4003, '5', 'Good course');
+INSERT INTO review (id, rating, description, course_id) VALUES (4001, '1', 'Bad course', 2);
+INSERT INTO review (id, rating, description, course_id) VALUES (4002, '4', 'Excellent course', 2);
+INSERT INTO review (id, rating, description, course_id) VALUES (4003, '5', 'Good course', 3);

@@ -5,9 +5,10 @@
  */
 package com.udemy.database.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.*;
+
 import lombok.Data;
 
 /**
@@ -19,12 +20,21 @@ import lombok.Data;
 public class Course {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String courseName;
 
-    protected Course() {
+    private Integer numberOfStudents;
+
+    private String lecturerName;
+
+    private Boolean isFull;
+
+//    @OneToMany(mappedBy = "course")
+//    private List<Review> reviews = new ArrayList<>();
+
+    public Course() {
 
     }
 

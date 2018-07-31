@@ -31,7 +31,7 @@ public class JdbcDemoApplication implements CommandLineRunner {
 //        logger.info("All users {}", personJdbcDAO.findAll());
 //        logger.info("User 1 {}", personJdbcDAO.findById(1));
 
-           Course course = courseRepo.findById(1002);
-           logger.info("Course {}", course);
+//           Course course = courseRepo.findById(1002);
+//           logger.info("Course {}", course);
     }
 }

@@ -8,6 +8,7 @@ package com.udemy.database.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import lombok.Data;
 
 /**
@@ -25,5 +26,8 @@ public class Review {
     private String rating;
     
     private String description;
+    
+    @ManyToOne
+    private Course course;
 
 }
